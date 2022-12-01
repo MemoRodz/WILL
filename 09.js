@@ -36,8 +36,8 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
-  if(this.funcion) return;
-  return
+  if(this.funcion) return true;
+  return false;
 };
 
 // No modifiques nada debajo de esta linea //
