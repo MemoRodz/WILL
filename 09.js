@@ -4,6 +4,18 @@
   código dentro de las funciones ya definidas. 
   No comentar la funcion 
 */
+
+  Array.prototype.filtrar = function(funcion){
+    var respuesta = [];
+
+    for(let i = 0; i < this.length; i++){
+      if(funcion(this[i])){
+        respuesta.push(this[i]);
+      }
+    }
+    return respuesta;
+  }
+
 function filtrar(funcion) {
   // Escribi una función filtrar en el prototipo de Arrays,
   // que recibe una funcion (callback) que devuelve true o false.
@@ -24,24 +36,8 @@ function filtrar(funcion) {
   // productos.filtrar(function(p) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
-  let regreso = false;
-  Array.prototype.Filtro = function(array){
-      var respuesta = [];
-      for(var i = 0; i < array.length; i++)
-      {
-        if(array[i][0] === 'a')
-        {
-          respuesta.push(array[i]);
-        }
-      }
-      return respuesta;
-  };
-
-  if(Array.prototype.Filtro(funcion))
-  {
-    regreso = true;
-  }
-  return regreso;
+  if(this.funcion) return;
+  return
 };
 
 // No modifiques nada debajo de esta linea //
